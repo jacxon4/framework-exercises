@@ -1,0 +1,39 @@
+<!--
+  <div class="row">
+    <div class="col">
+      <label>Name: </label>
+      <span>{{game.name}}</span>
+    </div>
+    <div class="col">
+      <label>Years from release: </label>
+      <span>{{game.getYearsFromRelease()}}</span>
+    </div>
+  </div>
+-->
+<h1>Displaying data collection</h1>
+<div class="container">
+  <div class="games-container">
+    <div class="row">
+      <div class="col">
+        <button
+          class="btn btn-primary btn-sm float-right"
+          (click)="show = !show"
+        >
+          Toogle games
+        </button>
+      </div>
+    </div>
+    <div *ngIf="show">
+      <div *ngFor="let game of games">
+        <app-game-summary
+          (onGameChange)="onGameChangeHandler($event)"
+          [game]="game"
+        ></app-game-summary>
+      </div>
+    </div>
+  </div>
+  <app-game-sellers
+    [gameName]="selectedGameName"
+    [sellers]="selectedGameSellers"
+  ></app-game-sellers>
+</div>
