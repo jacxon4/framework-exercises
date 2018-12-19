@@ -1,8 +1,8 @@
 # framework-exercises
 
-Exercises and deliverables for LemonCode framework module.
+Exercises and deliverable for LemonCode framework module.
 
 
-## Arrancar el proyecto
+## Project structure
 
-Access to Exercises or Deliverables and follow instructions. 
+Access to Exercises or Deliverable and follow instructions. 
