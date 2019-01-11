@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
     const {name = "", sellers = []} = this.gameStockService.getGameByName(gameEvent);
     this.selectedGameName = name;
     this.selectedGameSellers = sellers;
-  }
+  };
   ngOnInit(): void {
     // throw new Error("Method not implemented.");
     this.games = this.gameStockService.getGames();

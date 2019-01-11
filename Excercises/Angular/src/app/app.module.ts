@@ -1,20 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { GameSummaryComponent } from './games/game-summary.component';
-import { GameSellersComponent } from './games/game-sellers.component';
+import {AppComponent} from './app.component';
+import {GameSummaryComponent} from './games/game-summary.component';
+import {GameSellersComponent} from './games/game-sellers.component';
+import { CreateGameComponent } from './games/create-game.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    GameSummaryComponent,
-    GameSellersComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        GameSummaryComponent,
+        GameSellersComponent,
+        CreateGameComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
