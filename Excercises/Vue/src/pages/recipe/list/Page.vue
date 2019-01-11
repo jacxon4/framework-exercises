@@ -1,12 +1,10 @@
 <template>
-  <v-app>
-  <router-view />
-  </v-app>
+<h1>Recipe List Page</h1>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-  name: 'AppComponent',
+  name: 'RecipeListPage',
 })
 </script>

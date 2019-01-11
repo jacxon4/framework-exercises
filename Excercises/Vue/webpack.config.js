@@ -3,7 +3,7 @@ const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const basePath = __dirname;
 
 module.exports = {
@@ -17,7 +17,8 @@ module.exports = {
   mode: "development",
   entry: {
     app: "./main.ts",
-    vendor: ["vue"]
+    vendor: ["vue", "vuetify", "vue-router"],
+    vendorStyles: ["../node_modules/vuetify/dist/vuetify.min.css"]
   },
   output: {
     path: path.join(basePath, "dist"),
@@ -95,6 +96,6 @@ module.exports = {
       tsconfig: path.join(__dirname, "./tsconfig.json"),
       vue: true
     }),
-    new VueLoaderPlugin(),
+    new VueLoaderPlugin()
   ]
 };
