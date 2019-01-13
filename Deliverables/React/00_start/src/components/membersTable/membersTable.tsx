@@ -8,7 +8,7 @@ import {SearchArea} from "../searchArea";
 interface Props {
 }
 
-// We define members as a state (the compoment holding this will be a container
+// We define members as a state (the component holding this will be a container
 // component)
 interface State {
     currentCompany: string;
@@ -28,7 +28,7 @@ export class MembersTableComponent extends React.Component<Props, State> {
         memberAPI.getAllMembers(this.state.currentCompany).then((members) =>
             this.setState({members: members})
         );
-    }
+    };
 
     onChangeCompany = (event: React.ChangeEvent<HTMLInputElement>) => this.setState({currentCompany: event.target.value});
 

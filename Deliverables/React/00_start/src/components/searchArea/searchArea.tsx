@@ -12,7 +12,7 @@ const handleKeyPress = (onSearchFunction: SearchFunction) => (event: React.Keybo
     if (event.key === 'Enter') {
         onSearchFunction();
     }
-}
+};
 
 export const SearchArea = (props: Props) => (
     <>
