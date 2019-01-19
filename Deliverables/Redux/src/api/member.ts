@@ -7,12 +7,12 @@ class MemberAPI {
         const gitHubMembersUrl: string = `https://api.github.com/orgs/${organizationName}/members`;
 
         return fetch(gitHubMembersUrl)
-            .then((response) => this.checkStatus(response))
-            .then((response) => this.parseJSON(response))
+            .then((response) => MemberAPI.checkStatus(response))
+            .then((response) => MemberAPI.parseJSON(response))
             .then((data) => this.resolveMembers(data))
     }
 
-    private checkStatus(response: Response): Promise<Response> {
+    private static checkStatus(response: Response): Promise<Response> {
         if (response.status >= 200 && response.status < 300) {
             return Promise.resolve(response);
         } else {
@@ -20,7 +20,7 @@ class MemberAPI {
         }
     }
 
-    private parseJSON(response: Response): any {
+    private static parseJSON(response: Response): any {
         return response.json();
     }
 

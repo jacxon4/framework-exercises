@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { MemberEntity } from '../../model/member';
 
-export const MemberHead = () =>
+export const MemberHead = () => (
     <tr>
         <th>
             Avatar
@@ -12,4 +11,4 @@ export const MemberHead = () =>
         <th>
             Name
         </th>
-    </tr>
+    </tr>);

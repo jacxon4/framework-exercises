@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { MembersTableContainer } from './components';
+import { MemberListContainer } from './components';
 
 export const App = () => {
   return (
     <div>
-      <MembersTableContainer/>
+      <MemberListContainer/>
     </div>
   );
 };
