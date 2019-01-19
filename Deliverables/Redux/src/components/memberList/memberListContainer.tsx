@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {memberRequest} from '../../actions';
-import {MembersTableComponent} from './membersTable';
+import {MembersTableComponent} from './memberList';
 import {State} from '../../reducers';
 
 const mapStateToProps = (state: State) => {
@@ -18,7 +18,7 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export const MembersTableContainer = connect(
+export const MemberListContainer = connect(
     mapStateToProps,
     mapDispatchToProps
 )(MembersTableComponent);
