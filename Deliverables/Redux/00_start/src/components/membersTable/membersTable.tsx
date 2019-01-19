@@ -1,13 +1,13 @@
 import * as React from 'react';
-import {MemberEntity} from '../../model/member';
 import {MemberRow} from './memberRow';
 import {MemberHead} from './memberHead';
 import {SearchAreaContainer} from "../searchArea";
+import {MemberViewModel} from "../../viewModel/memberViewModel";
 
 
 interface Props {
     loadMembers: (company: string) => any;
-    members: Array<MemberEntity>;
+    members: Array<MemberViewModel>;
     filter: string;
 }
 
@@ -22,7 +22,7 @@ export const MembersTableComponent = (props: Props) => (
             </thead>
             <tbody>
             {
-                props.members.map((member: MemberEntity) =>
+                props.members.map((member: MemberViewModel) =>
                     <MemberRow key={member.id} member={member}/>
                 )
             }

@@ -1,7 +1,7 @@
 import {actionsEnums} from '../common/actionsEnums';
-import {MemberEntity} from '../model/member';
+import {MemberViewModel} from "../viewModel/memberViewModel";
 
-export type memberState = MemberEntity[];
+export type memberState = MemberViewModel[];
 
 export const memberReducer = (state: memberState = [], action) => {
     switch (action.type) {

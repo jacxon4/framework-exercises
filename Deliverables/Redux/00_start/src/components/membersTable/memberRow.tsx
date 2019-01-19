@@ -1,15 +1,15 @@
 import * as React from 'react';
-import {MemberEntity} from '../../model/member';
+import {MemberViewModel} from "../../viewModel/memberViewModel";
 
-export const MemberRow = (props: { member: MemberEntity }) =>
+export const MemberRow = (props: { member: MemberViewModel }) =>
     (<tr>
         <td>
-            <img src={props.member.avatar_url} style={{maxWidth: '10rem'}}/>
+            <img src={props.member.avatar} style={{maxWidth: '10rem'}}/>
         </td>
         <td>
             <span>{props.member.id}</span>
         </td>
         <td>
-            <span>{props.member.login}</span>
+            <span>{props.member.name}</span>
         </td>
     </tr>);
