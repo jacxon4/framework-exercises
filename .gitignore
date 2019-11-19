@@ -4,6 +4,10 @@
 /dist
 /tmp
 /out-tsc
+*/src/**/*.js
+*/src/**/*.js.map
+*/coverage/
+*.orig
 
 # dependencies
 node_modules/
